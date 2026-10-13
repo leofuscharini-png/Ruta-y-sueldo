@@ -2,6 +2,8 @@
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ruta y sueldo</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#F2A900">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#EEF0F2;--sf:#fff;--tx:#14181C;--mu:#5A6570;--bd:#D5DAE0;--ac:#F2A900;--on-ac:#2A1E00;--ok:#1B7F4B;--bad:#C6362B;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -137,4 +139,5 @@ $('mkm').textContent=k1(mk)+' km';$('tot').textContent=money(base+pk+pp);
 $('pBase').textContent=money(base);$('pKm').textContent=money(pk);$('pPer').textContent=money(pp)}
 $('waze').onclick=function(){var q=$('dst').value.trim();this.href=q?'https://waze.com/ul?q='+encodeURIComponent(q)+'&navigate=yes':'https://waze.com/ul'};
 render();if(trip)watch();setInterval(render,1000);
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
 </script></body></html>
